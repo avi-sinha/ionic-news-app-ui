@@ -7,17 +7,9 @@
     <html >
     <html lang="en" >
     <title id="page-title">The Dominion Post</title>
-    <script
-      type="module"
-      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
 
     <style id="core-style">
       :root {
@@ -27,14 +19,11 @@
         --ion-color-primary-contrast-rgb: 255, 255, 255;
         --ion-color-primary-shade: #4854e0;
         --ion-color-primary-tint: #6370ff;
+        --ion-safe-area-bottom:10px;
       }
     </style>
 
     <style>
-      body{
-        margin: 0px;
-        padding: 0px;
-      }
 
       /* media query for iOS */
       @supports (-webkit-touch-callout: none) {
@@ -56,6 +45,8 @@
         cursor: pointer;
       }
 
+
+
       @media screen and (min-width: 0px) and (max-width: 1024px) {
         ion-card-content {
           display: none;
@@ -70,9 +61,6 @@
         }
 
         /* show it on small screens */
-        ion-card-title {
-          font-size: 100%;
-        }
       }
 
       @media screen and (min-width: 1024px) {
@@ -93,7 +81,7 @@
     </style>
 
     <script type="module">
-      import { menuController } from "https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js";
+      import { menuController } from "https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js";
       window.menuController = menuController;
     </script>
   </head>
@@ -102,7 +90,7 @@
     <ion-app>
       <ion-menu side="start" id="side-menu" content-id="main-content">
         <ion-header color="primary">
-          <ion-toolbar translucent align="center">
+          <ion-toolbar translucent  color="primary">
             <ion-title>Menu</ion-title>
           </ion-toolbar>
         </ion-header>
@@ -193,10 +181,10 @@
           <ion-grid>
             <ion-row>
               <ion-col size-xs="12" size-md="6">
-                <ion-card>
+                <ion-card class="ion-no-padding ion-no-margin">
                   <img src="assets/pics/news1.jpeg" />
                   <ion-card-header>
-                    <ion-card-title color="primary"
+                    <ion-card-title color="primary" style="font-size: 120%;"
                       >First grain ship leaves under Russia deal</ion-card-title
                     >
                     <ion-card-subtitle
@@ -204,7 +192,7 @@
                       easing a global food crisis.</ion-card-subtitle
                     >
                   </ion-card-header>
-                  <ion-card-content>
+                  <ion-card-content class="ion-text-justify">
                     The first ship carrying grain has left a Ukrainian port
                     under a landmark deal with Russia. Turkish and Ukrainian
                     officials say the ship left the southern port of Odesa early
@@ -212,18 +200,18 @@
                   </ion-card-content>
                 </ion-card>
               </ion-col>
-              <ion-col size-md="3">
-                <ion-card>
+              <ion-col size-md="3" >
+                <ion-card class="ion-no-padding ion-no-margin">
                   <img src="assets/pics/news3.jpeg" />
                   <ion-card-header>
-                    <ion-card-title color="primary">
+                    <ion-card-title color="primary" style="font-size: 120%;">
                       New Zealand fully reopens borders</ion-card-title
                     >
                     <ion-card-subtitle>
                       The boardes were closes since March 2020.
                     </ion-card-subtitle>
                   </ion-card-header>
-                  <ion-card-content>
+                  <ion-card-content class="ion-text-justify">
                     New Zealand's borders are fully open for the first time
                     since March 2020, when they shut in an effort to keep out
                     Covid-19.
@@ -231,17 +219,17 @@
                 </ion-card>
               </ion-col>
               <ion-col size-md="3">
-                <ion-card>
+                <ion-card class="ion-no-padding ion-no-margin">
                   <img src="assets/pics/news2.jpeg" />
                   <ion-card-header>
-                    <ion-card-title color="primary"
+                    <ion-card-title color="primary" style="font-size: 120%;"
                       >The PM and politicians go on tour</ion-card-title
                     >
                     <ion-card-subtitle>
                       Celebrating 60 years of official friendship.
                     </ion-card-subtitle>
                   </ion-card-header>
-                  <ion-card-content>
+                  <ion-card-content class="ion-text-justify">
                     Jacinda Ardern and politicians from across the spectrum have
                     touched down in Samoa, marking the reopening of the Pacific
                     nation.
@@ -251,10 +239,14 @@
             </ion-row>
           </ion-grid>
 
-          <div style="border-radius: 5px; padding: 5px; margin: 5px">
-            <ion-title size="small"> Tranding Now </ion-title>
-
             <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <ion-toolbar style="border-radius: 5px;">
+                  <ion-title color="primary">Tranding Now</ion-title>
+                  </ion-toolbar>
+                </ion-col>
+              </ion-row>
               <ion-row>
                 <ion-col size-xs="12" size-sm="6" size-lg="4" size-xl="3">
                   <ion-item color="light">
@@ -302,13 +294,12 @@
                 </ion-col>
               </ion-row>
             </ion-grid>
-          </div>
           <div>
             <ion-grid>
               <ion-row>
                 <ion-col size-xs="12" size-md="4" size-lg="4" size-xl="3">
                   <ion-list>
-                    <ion-list-header color="primary">
+                    <ion-list-header color="primary" class="ion-padding-bottom" style="font-size: 110%; border-radius: 5px;">
                       Latest headlines
                     </ion-list-header>
                     <ion-item>
@@ -374,13 +365,17 @@
                   </ion-list>
                 </ion-col>
                 <ion-col size-xs="12" size-md="8" size-lg="8" size-xl="9">
-                  <ion-toolbar>
-                    <ion-title size="small">Commonwealth Games</ion-title>
-                  </ion-toolbar>
                   <ion-grid>
+                    <ion-row style="padding-bottom: 0px;">
+                      <ion-col>
+                      <ion-toolbar style="border-radius: 5px;">
+                        <ion-title color="primary">Commonwealth Games</ion-title>
+                      </ion-toolbar>
+                      </ion-col>
+                    </ion-row>
                     <ion-row>
                       <ion-col size-md="6" size-lg="3">
-                        <ion-card>
+                        <ion-card class="ion-no-padding ion-no-margin">
                           <img src="assets/pics/news8.png" />
                           <ion-card-header>
                             <ion-card-subtitle color="primary"
@@ -388,7 +383,7 @@
                               Birmingham?</ion-card-subtitle
                             >
                           </ion-card-header>
-                          <ion-card-content>
+                          <ion-card-content class="ion-text-justify">
                             Beaten for first time in eight years, Adam Peaty was
                             "the lowest of the low". His response was
                             remarkable.
@@ -397,24 +392,22 @@
                       </ion-col>
 
                       <ion-col size-md="6" size-lg="3">
-                        <ion-card>
+                        <ion-card class="ion-no-padding ion-no-margin">
                           <img src="assets/pics/news9.png" />
                           <ion-card-header>
                             <ion-card-subtitle color="primary"
                               >Australian swimmer becomes most successful
-                              Commonwealth Games athlete ever
                             </ion-card-subtitle>
                           </ion-card-header>
-                          <ion-card-content>
+                          <ion-card-content class="ion-text-justify">
                             Emma McKeon wins her 19th medal and fifth gold in
-                            Birmingham in the mixed 4x100m relay to claim the
-                            Games record outright.
+                            Birmingham in the mixed 4x100m relay.
                           </ion-card-content>
                         </ion-card>
                       </ion-col>
 
                       <ion-col size-md="6" size-lg="3">
-                        <ion-card>
+                        <ion-card class="ion-no-padding ion-no-margin">
                           <img src="assets/pics/news10.png" />
                           <ion-card-header>
                             <ion-card-subtitle color="primary"
@@ -422,24 +415,23 @@
                               Games</ion-card-subtitle
                             >
                           </ion-card-header>
-                          <ion-card-content>
+                          <ion-card-content class="ion-text-justify">
                             Career-best figures from Hayley Jensen in big win
-                            over Sri Lanka ensures New Zealand place in cricket
+                            over Sri Lanka ensures Kiwis in
                             semifinals.
                           </ion-card-content>
                         </ion-card>
                       </ion-col>
 
                       <ion-col size-md="6" size-lg="3">
-                        <ion-card>
+                        <ion-card class="ion-no-padding ion-no-margin">
                           <img src="assets/pics/news11.png" />
                           <ion-card-header>
                             <ion-card-subtitle color="primary"
-                              >Recap: Eve Thomas fourth in 800m final behind
-                              Australian domination
+                              >Eve Thomas fourth in 800m final
                             </ion-card-subtitle>
                           </ion-card-header>
-                          <ion-card-content>
+                          <ion-card-content class="ion-text-justify">
                             No golds for New Zealand on day five as 21-year-old
                             pole vaulter Imogen Ayris and the women's bowls four
                             secure bronzes.
@@ -456,15 +448,15 @@
         </ion-content>
 
         <ion-footer class="ion-no-border" id="footer" style="display: none;">
-          <ion-toolbar>      
-          <ion-tabs no-outlet>
+          <ion-toolbar class="ion-no-border">      
+          <ion-tabs class="ion-no-border" no-outlet>
             <ion-tab tab="news"></ion-tab>
             <ion-tab tab="commment"></ion-tab>
             <ion-tab tab="business"></ion-tab>
             <ion-tab tab="sports"></ion-tab>
             <ion-tab tab="more"></ion-tab>
             
-            <ion-tab-bar slot="top" >
+            <ion-tab-bar slot="top" class="ion-no-border">
               <ion-tab-button tab="news">
                 <ion-label>News</ion-label>
                 <ion-icon name="newspaper-outline"></ion-icon>
@@ -515,6 +507,7 @@
     --ion-color-primary-contrast-rgb: 255,255,255;
     --ion-color-primary-shade: #046b3e;
     --ion-color-primary-tint: #059c5a;
+    --ion-safe-area-bottom:10px;
   }`;
     document.getElementById("page-title").innerHTML = "The Press";
     document.getElementById("header-title").innerHTML =
