@@ -81,14 +81,14 @@
     </style>
 
     <script type="module">
-      import { menuController } from "https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js";
+      import { menuController } from "https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js";
       window.menuController = menuController;
     </script>
   </head>
 
   <body>
     <ion-app>
-      <ion-menu side="start" id="side-menu" content-id="main-content">
+      <ion-menu side="end" id="side-menu" content-id="main-content">
         <ion-header color="primary">
           <ion-toolbar translucent  color="primary">
             <ion-title>Menu</ion-title>
@@ -130,13 +130,9 @@
 
 
       <div class="ion-page" id="main-content">
-
-
-
-
         <ion-header>
           <ion-toolbar color="primary">
-            <ion-buttons id="icon-menu" slot="start">
+            <ion-buttons id="icon-menu" slot="end">
               <ion-menu-button></ion-menu-button>
             </ion-buttons>
             <ion-title id="header-title">
@@ -477,7 +473,7 @@
                 <ion-icon name="american-football-outline"></ion-icon>
               </ion-tab-button>
 
-              <ion-tab-button tab="more">
+              <ion-tab-button tab="more" onclick="openMenu()">
                 <ion-label>More</ion-label>
                 <ion-icon name="menu-outline"></ion-icon>
               </ion-tab-button>
@@ -489,8 +485,6 @@
       </div>
     </ion-app>
 
-
-    <script src="app.js"></script>
     <script>
       async function openMenu() {
         await menuController.open();
