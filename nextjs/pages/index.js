@@ -1,15 +1,16 @@
 import Head from 'next/head';
-export async function getServerSideProps(){
+/* The following line enforces SSR for the title "THE DOMINION POST" */  
+ export async function getServerSideProps(){
  return{
-  props:{data:'none'}
+  props:{title:'THE DOMINION POST'}
  }
 }
-export default function Home({data}) {
+export default function Home({title}) {
   return(<>
   <Head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-    <title id="page-title">The Dominion Post</title>
+    <title id="page-title">{title}</title>
     <script src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/> 
@@ -76,9 +77,7 @@ export default function Home({data}) {
               <ion-menu-button id="icon-menu-button"></ion-menu-button>
             </ion-buttons>
             <ion-title id="header-title">
-              <b className="bold">T</b>HE&nbsp;
-              <b className="bold">D</b>OMINION&nbsp;
-              <b className="bold">P</b>OST
+              {title}
             </ion-title>
             <ion-row id="inline-menu" class="inline-menu" slot="end">
               <ion-col>
