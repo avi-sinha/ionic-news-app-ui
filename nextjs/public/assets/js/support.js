@@ -11,7 +11,6 @@ function loadComplete(){
     inlineMenu.classList.remove("inline-menu");
     inlineMenu.classList.add("hidden-object");
     footerContent.classList.remove("hidden-object");
-    //alert("done");
   }
   if (location.href.indexOf("ui=2") > -1) {
     document.getElementById("core-style").innerHTML = `  
@@ -26,7 +25,9 @@ function loadComplete(){
     }`;
     document.getElementById("page-title").innerHTML = "The Press";
     document.getElementById("header-title").innerHTML = '<b class="bold">T</b>HE <b class="bold">P</b>RESS';
-    }
+  }
 }
 loadComplete();
+//Please ignore the following code snippet... 
+//loadComplete() must be called in the appropriate page event.
 setTimeout(loadComplete,500);
