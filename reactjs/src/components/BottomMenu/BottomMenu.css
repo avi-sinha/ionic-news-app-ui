@@ -1,0 +1,9 @@
+ion-card-title{
+    font-size:120%;
+}
+
+ion-card-subtitle{
+    font-variant: inherit !important;
+    margin-top:5px;
+    font-size:90%
+}

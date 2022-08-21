@@ -1,0 +1,14 @@
+@media screen and (min-width: 0px) and (max-width: 1024px) {
+    ion-card-title{
+      font-size:110%;
+    }
+    ion-card-content {
+        display: none;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {  
+    ion-card-content {
+      display: block;
+    }
+  }

@@ -2,6 +2,8 @@
 */node_modules
 */.pnp
 */.pnp.js
+ion-react/*
+
 
 # testing
 */coverage
@@ -14,6 +16,7 @@
 */build
 
 # misc
+.DS_Store
 */.DS_Store
 */.env*
 
