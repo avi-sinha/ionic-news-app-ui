@@ -1,12 +1,13 @@
-import { IonCol, IonContent, IonGrid, IonRow } from "@ionic/react";
+import {  IonContent } from "@ionic/react";
 import Header from "../components/Header/Header";
-import Latest from "../components/Latest/Latest";
+import Highlights from "../components/Latest/Latest";
 import RunningNews from "../components/RunningNews/RunningNews";
 import TopLines from "../components/TopLines/TopLines";
-import Trending from "../components/Trending/Trending";
+import Tranding from "../components/Trending/Trending";
 import SideMenu from "../components/SideMenu/SideMenu";
 import BottomMenu from "../components/BottomMenu/BottomMenu";
 import settings from "../theme/variable";
+import "./Home.css"
 
 const Home: React.FC = () => {
   return (
@@ -15,20 +16,11 @@ const Home: React.FC = () => {
       <SideMenu title="Menu" menuId="mainMenu" color="primary" />
       <IonContent class="scroll-content">
         <TopLines />
-        <Trending />
-        <IonGrid>
-          <IonRow>
-            <IonCol size-xs="12" size-md="4" size-lg="4" size-xl="3">
-              <Latest />
-            </IonCol>
-            <IonCol size-xs="12" size-md="8" size-lg="8" size-xl="9">
-              <RunningNews />
-            </IonCol>
-          </IonRow>
-        </IonGrid>
+        <Tranding />
+        <div className="left"><Highlights /></div>
+        <div className="right"><RunningNews /></div>
       </IonContent>
       { settings.config.mode === 'ios' && <BottomMenu />}
-      
     </>
   );
 };

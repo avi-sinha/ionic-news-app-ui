@@ -12,6 +12,7 @@ const Tranding: React.FC<{title?:string,attachMenuId?:string,color?:string}> = (
                 </IonCol>
               </IonRow>
               <IonRow>
+                
                 <IonCol size-xs="12" size-sm="6" size-lg="4" size-xl="3">
                   <IonItem color="light">
                     <IonThumbnail slot="start">

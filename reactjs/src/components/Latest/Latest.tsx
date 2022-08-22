@@ -1,5 +1,5 @@
 import { IonItem, IonLabel, IonList, IonListHeader, IonIcon} from '@ionic/react';
-import "./Highlights.css"
+import "./Latest.css"
 
 const Highlights: React.FC<{title?:string,attachMenuId?:string,color?:string}> = (props) => {
     return (
