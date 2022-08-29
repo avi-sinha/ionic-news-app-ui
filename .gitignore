@@ -25,4 +25,4 @@ ion-react/*
 */yarn-debug.log*
 */yarn-error.log*
 */.next/
-nextjs/package-lock.json
+*/package-lock.json
