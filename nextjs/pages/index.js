@@ -12,22 +12,19 @@ export default function Home({ title }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         <title id="page-title">{title}</title>
-        <script src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
-        />
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@6.2.4/dist/ionic/ionic.esm.js"></script>
+        <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@6.2.4/dist/ionic/ionic.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@6.2.4/css/ionic.bundle.css"/>
         <style id="core-style">
           {`:root {
-      --ion-color-primary: #5260ff;
-      --ion-color-primary-rgb: 82, 96, 255;
-      --ion-color-primary-contrast: #ffffff;
-      --ion-color-primary-contrast-rgb: 255, 255, 255;
-      --ion-color-primary-shade: #4854e0;
-      --ion-color-primary-tint: #6370ff;
-      --ion-safe-area-bottom: 10px;
-    }`}
+            --ion-color-primary: #5260ff;
+            --ion-color-primary-rgb: 82, 96, 255;
+            --ion-color-primary-contrast: #ffffff;
+            --ion-color-primary-contrast-rgb: 255, 255, 255;
+            --ion-color-primary-shade: #4854e0;
+            --ion-color-primary-tint: #6370ff;
+            --ion-safe-area-bottom: 10px;
+          }`}
         </style>
       </Head>
 

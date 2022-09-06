@@ -1,59 +1,84 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title id="page-title">The Dominion Post</title>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@6.2.4/dist/ionic/ionic.esm.js"></script>
-  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@6.2.4/dist/ionic/ionic.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@6.2.4/css/ionic.bundle.css"/>
-  <style id="core-style">
-    :root {
-      --ion-color-primary: #5260ff;
-      --ion-color-primary-rgb: 82, 96, 255;
-      --ion-color-primary-contrast: #ffffff;
-      --ion-color-primary-contrast-rgb: 255, 255, 255;
-      --ion-color-primary-shade: #4854e0;
-      --ion-color-primary-tint: #6370ff;
-      --ion-safe-area-bottom: 10px;
-    }
-  </style>
-</head>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title id="page-title">The Dominion Post</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@6.2.4/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@6.2.4/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@6.2.4/css/ionic.bundle.css" />
+
+
+    https://cdn.jsdelivr.net/npm/ionicons@6.0.2/
+    <style id="core-style">
+      :root {
+        --ion-color-primary: #006ab8;
+        --ion-color-primary-rgb: 0, 106, 184;
+        --ion-color-primary-contrast: #ffffff;
+        --ion-color-primary-contrast-rgb: 255, 255, 255;
+        --ion-color-primary-shade: #054b7d;
+        --ion-color-primary-tint: #0188e8;
+
+        --ion-color-secondary: #00355C;
+        --ion-color-secondary-rgb: 0, 53, 92;
+        --ion-color-secondary-contrast: #ffffff;
+        --ion-color-secondary-contrast-rgb: 255, 255, 255;
+        --ion-color-secondary-shade: #001b2f;
+        --ion-color-secondary-tint: #015c9c;
+
+        --ion-safe-area-bottom: 10px;
+      }
+    </style>
+  </head>
 
 <body>
   <ion-app>
-    <ion-menu side="end" id="side-menu" content-id="main-content">
-      <ion-header color="primary">
-        <ion-toolbar translucent color="primary">
-          <ion-title>Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
+    
+    <ion-menu side="start" id="side-menu" content-id="main-content">
       <ion-content>
         <ion-list>
           <ion-item>
             <ion-icon name="newspaper-outline" slot="start"></ion-icon>
-            <ion-label>News</ion-label>
+            <ion-list style="width:100%">
+              <ion-list-header class="ion-c-smenu-text">Front Page</ion-list-header>
+              <ion-progress-bar value="0.5"></ion-progress-bar>
+            </ion-list>
           </ion-item>
           <ion-item>
             <ion-icon name="chatbox-ellipses-outline" slot="start"></ion-icon>
-            <ion-label>Commment</ion-label>
+            <ion-list style="width:100%">
+              <ion-list-header class="ion-c-smenu-text">Local News</ion-list-header>
+              <ion-progress-bar value="0.4"></ion-progress-bar>
+            </ion-list>
           </ion-item>
           <ion-item>
             <ion-icon name="business" slot="start"></ion-icon>
-            <ion-label>Business</ion-label>
+            <ion-list style="width:100%">
+              <ion-list-header class="ion-c-smenu-text">Business</ion-list-header>
+              <ion-progress-bar value="0.5"></ion-progress-bar>
+            </ion-list>            
           </ion-item>
           <ion-item>
             <ion-icon name="car-outline" slot="start"></ion-icon>
-            <ion-label>Capital Life</ion-label>
+            <ion-list style="width:100%">
+              <ion-list-header class="ion-c-smenu-text">Lifestyle</ion-list-header>
+              <ion-progress-bar value="0.3"></ion-progress-bar>
+            </ion-list>
           </ion-item>
           <ion-item>
             <ion-icon name="color-filter-outline" slot="start"></ion-icon>
-            <ion-label>Culture</ion-label>
+            <ion-list style="width:100%">
+              <ion-list-header class="ion-c-smenu-text">World</ion-list-header>
+              <ion-progress-bar value="0.4"></ion-progress-bar>
+            </ion-list>
           </ion-item>
           <ion-item>
             <ion-icon name="american-football-outline" slot="start"></ion-icon>
-            <ion-label>Sports</ion-label>
+            <ion-list style="width:100%">
+              <ion-list-header class="ion-c-smenu-text">Sports</ion-list-header>
+              <ion-progress-bar value="0.8"></ion-progress-bar>
+            </ion-list>
           </ion-item>
           <ion-item>
             <ion-icon name="call-outline" slot="start"></ion-icon>
@@ -66,37 +91,68 @@
     <div class="ion-page" id="main-content">
       <ion-header>
         <ion-toolbar color="primary">
-          <ion-buttons id="icon-menu" slot="end" class="icon-menu">
-            <ion-menu-button id="icon-menu-button"></ion-menu-button>
-          </ion-buttons>
-          <ion-title id="header-title">
-            <b class="bold">T</b>HE&nbsp;
-            <b class="bold">D</b>OMINION&nbsp;
-            <b class="bold">P</b>OST
-          </ion-title>
-          <ion-row id="inline-menu" class="ion-align-items-center inline-menu" slot="end">
-            <ion-col>
-              <ion-icon name="newspaper-outline"></ion-icon>&nbsp;<ion-label>News</ion-label>
+          <ion-grid>
+            <ion-row class="ion-align-items-center">
+              <ion-col>
+                <ion-buttons >
+                  <ion-menu-button id="icon-menu-button"></ion-menu-button>
+                  <ion-label class="inline-menu" style="font-size: 80%;"><b>Edition:</b> Tuesday, 30 Aug 2022 ></ion-label>
+                </ion-buttons>
+              </ion-col>
+              <ion-col style="text-align: center;" size-xs="6" size-sm="5" size-md="4" size-lg="3" size-xl="2" class="ion-align-items-center">
+                <ion-img src="assets/logo/dempost.svg"></ion-img>
+                <ion-label class="icon-menu" style="font-size: 70%; line-height: 1;"><br/><b>Edition:</b> Tuesday, 30 Aug 2022 ></ion-label>
+              </ion-col>
+              <ion-col style="text-align: right;">
+                <div class="ion-c-sub-button">
+                  <ion-grid style="margin: 0px;  padding: 0px;">
+                    <ion-row>
+                      <ion-col>    
+                        <ion-label style="width: 100px;">Subscribe</ion-label>
+                      </ion-col>
+                      <ion-col style="background-color:#ffffff;">
+                        <ion-label  color="primary">Login</ion-label>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </div>
             </ion-col>
-            <ion-col>
-              <ion-icon name="chatbox-ellipses-outline"></ion-icon>&nbsp;<ion-label>Commment</ion-label>
-            </ion-col>
-            <ion-col>
-              <ion-icon name="business"></ion-icon>&nbsp;<ion-label>Business</ion-label>
-            </ion-col>
-            <ion-col>
-              <ion-icon name="car-outline"></ion-icon>&nbsp;<ion-label>Capital&nbsp;Life</ion-label>
-            </ion-col>
-            <ion-col>
-              <ion-icon name="color-filter-outline"></ion-icon>&nbsp;<ion-label>Culture</ion-label>
-            </ion-col>
-            <ion-col>
-              <ion-icon name="american-football-outline"></ion-icon>&nbsp;<ion-label>Sports</ion-label>
-            </ion-col>
-            <ion-col>
-              <ion-icon name="call-outline"></ion-icon>&nbsp;<ion-label>Contact&nbsp;us</ion-label>
-            </ion-col>
-          </ion-row>
+            </ion-row>
+          </ion-grid>
+        </ion-toolbar>
+        <ion-toolbar
+          id="inline-menu"
+          color="secondary"
+          class="ion-align-items-center ion-c-toolbar-navbar inline-menu"
+        >
+          <ion-grid>
+            <ion-row class="ion-align-items-center">
+              <ion-col offset="2" size="1">
+                <ion-label>Wellington</ion-label>
+              </ion-col>
+              <ion-col size="1">
+                <ion-label>Politics</ion-label>
+              </ion-col>
+              <ion-col size="1">
+                <ion-label>National</ion-label>
+              </ion-col>
+              <ion-col size="1">
+                <ion-label>Culture</ion-label>
+              </ion-col>
+              <ion-col size="1">
+                <ion-label>Business</ion-label>
+              </ion-col>
+              <ion-col size="1">
+                <ion-label>World</ion-label>
+              </ion-col>
+              <ion-col size="1">
+                <ion-label>Lifestyle</ion-label>
+              </ion-col>
+              <ion-col size="1">
+                <ion-label>Sport</ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
         </ion-toolbar>
       </ion-header>
 
@@ -382,81 +438,92 @@
   </ion-app>
 
   <style id="global-style">
-    div#main-content ion-label:hover {
-      text-decoration: underline;
-      cursor: pointer;
-    }
 
-    ion-menu#side-menu ion-label:hover {
-      text-decoration: underline;
-      cursor: pointer;
-    }
+    .ion-c-toolbar-navbar {
+        display: flex;
+        height: 35px;
+      }
 
-    .menubar-item :hover {
-      text-decoration: underline;
-      cursor: pointer;
-    }
+      .ion-c-smenu-text{
+        font-size: 100%; 
+        padding-left: 0px;
+      }
 
-    .bold {
-      font-size: 110%
-    }
+      .ion-c-sub-button{
+        display:inline-block; text-align: center; margin: 0px;  padding: 0px; width:160px; border-radius: 2px; border: #ffffff solid 1px; font-size: 80%;
+      }
 
-    .small {
-      font-size: 90%;
-      white-space: normal !important;
-    }
+      div#main-content ion-label:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
 
+      ion-menu#side-menu ion-label:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
 
-    .hidden-object {
-      display: none;
-    }
+      .menubar-item :hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
 
-    ion-card-title {
-      font-size: 120%;
-    }
-
-    @media screen and (min-width: 0px) and (max-width: 1024px) {
-
-      ion-card-title {
+      .bold {
         font-size: 110%;
       }
 
+      .small {
+        font-size: 90%;
+        white-space: normal !important;
+      }
 
-      ion-card-content {
+      .hidden-object {
         display: none;
       }
 
-
-      .inline-menu {
-        display: none;
+      ion-card-title {
+        font-size: 120%;
       }
 
-      .icon-menu {
-        display: block;
+      @media screen and (min-width: 0px) and (max-width: 1024px) {
+        ion-card-title {
+          font-size: 110%;
+        }
+
+        ion-card-content {
+          display: none;
+        }
+
+        .ion-c-sub-button{
+          display: none;
+        }
+
+        .inline-menu {
+          display: none;
+        }
+
+        .icon-menu {
+          display: block;
+        }
+
+        /* show it on small screens */
       }
 
+      @media screen and (min-width: 1024px) {
+        ion-card-content {
+          display: block;
+        }
 
-      /* show it on small screens */
-    }
+        .inline-menu {
+          display: flex;
+        }
 
-    @media screen and (min-width: 1024px) {
+        .icon-menu {
+          display: none;
+        }
 
-      ion-card-content {
-        display: block;
+        /* hide it elsewhere */
       }
-
-
-      .inline-menu {
-        display: block;
-      }
-
-      .icon-menu {
-        display: none;
-      }
-
-      /* hide it elsewhere */
-    }
   </style>
-  <script src="assets/js/support.js"></script>
 </body>
 </html>
