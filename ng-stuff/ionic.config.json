@@ -1,0 +1,7 @@
+{
+  "name": "ng-stuff",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

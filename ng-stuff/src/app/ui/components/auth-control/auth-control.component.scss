@@ -1,0 +1,9 @@
+.ion-c-sub-button{
+  display:inline-block; text-align: center; margin: 0px;  padding: 0px; width:160px; border-radius: 2px; border: #ffffff solid 1px; font-size: 80%;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1024px) {
+  .ion-c-sub-button{
+    display: none;
+  }
+}
